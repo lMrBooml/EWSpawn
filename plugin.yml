@@ -1,0 +1,55 @@
+name: MultiWorldSpawn
+main: ru.lmrbooml.MultiWorldSpawn.MwspawnMain
+version: 1.0.1
+author: l_MrBoom_l
+description: "Добавляет команды /setspawn и /spawn, а также даёт возможность установить отдельные точки спавна для каждого мира."
+
+commands:
+  setspawn:
+    usage: "§cИспользование: /setspawn [ < [мир] <x> <y> <z> > [<yaw> <pitch>] ]"
+    permission: mwspawn.setspawn
+    description: "Устанавливает точку спавна."
+  spawn:
+    usage: "§cИспользование: /spawn [игрок]"
+    permission: mwspawn.spawn
+    description: "Телепортирует вас или указанного игрока на спавн."
+  mwspawn:
+    usage: "§cИспользование: /mwspawn"
+    permission: mwspawn.help
+    description: "Отображает список команд плагина MultiWorldSpawn."
+
+permissions:
+  mwspawn.*:
+    description: "Даёт доступ ко всем командам плагина MultiWorldSpawn."
+    default: op
+    children:
+      mwspawn.setspawn: true
+      mwspawn.spawn: true
+      mwspawn.help: true
+      mwspawn.reload: true
+      mwspawn.info: true
+  mwspawn.help:
+    description: "Даёт доступ к списку команд MultiWorldSpawn."
+    default: true
+  mwspawn.reload:
+    description: "Даёт доступ к команде перезагрузки плагина."
+    default: false
+  mwspawn.info:
+    description: "Даёт доступ к информации о плагине."
+    default: true
+  mwspawn.setspawn:
+    description: "Даёт доступ к команде установки точки спавна."
+    default: false
+  mwspawn.spawn:
+    description: "Даёт возможность телепортироваться на спавн."
+    default: true
+    children:
+      mwspawn.spawn.others: false
+  mwspawn.spawn.others:
+    description: "Даёт возможность телепортировать других игроков на спавн."
+    default: false
+    children:
+      mwspawn.spawn.others.silent: false
+  mwspawn.spawn.others.silent:
+    description: "Даёт возможность телепортировать других игроков на спавн анонимно."
+    default: false
