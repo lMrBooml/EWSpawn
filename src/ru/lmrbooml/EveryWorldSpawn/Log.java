@@ -1,4 +1,4 @@
-package ru.lmrbooml.EveryWorldSpawn;
+package ru.lmrbooml.EveryWorldSpawn;//
 
 import java.util.logging.Logger;
 

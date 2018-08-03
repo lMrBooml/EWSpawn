@@ -1,4 +1,4 @@
-package ru.lmrbooml.EveryWorldSpawn;
+package ru.lmrbooml.EveryWorldSpawn;//
 
 import java.io.File;
 import java.io.IOException;
