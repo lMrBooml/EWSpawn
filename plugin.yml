@@ -1,5 +1,5 @@
-name: MultiWorldSpawn
-main: ru.lmrbooml.MultiWorldSpawn.MwspawnMain
+name: EveryWorldSpawn
+main: ru.lmrbooml.EveryWorldSpawn.Ewspawn
 version: 1.0.1
 author: l_MrBoom_l
 description: "Добавляет команды /setspawn и /spawn, а также даёт возможность установить отдельные точки спавна для каждого мира."
@@ -7,49 +7,49 @@ description: "Добавляет команды /setspawn и /spawn, а такж
 commands:
   setspawn:
     usage: "§cИспользование: /setspawn [ < [мир] <x> <y> <z> > [<yaw> <pitch>] ]"
-    permission: mwspawn.setspawn
+    permission: ewspawn.setspawn
     description: "Устанавливает точку спавна."
   spawn:
     usage: "§cИспользование: /spawn [игрок]"
-    permission: mwspawn.spawn
+    permission: ewspawn.spawn
     description: "Телепортирует вас или указанного игрока на спавн."
-  mwspawn:
-    usage: "§cИспользование: /mwspawn"
-    permission: mwspawn.help
-    description: "Отображает список команд плагина MultiWorldSpawn."
+  ewspawn:
+    usage: "§cИспользование: /ewspawn"
+    permission: ewspawn.help
+    description: "Отображает список команд плагина EveryWorldSpawn."
 
 permissions:
-  mwspawn.*:
-    description: "Даёт доступ ко всем командам плагина MultiWorldSpawn."
+  ewspawn.*:
+    description: "Даёт доступ ко всем командам плагина EveryWorldSpawn."
     default: op
     children:
-      mwspawn.setspawn: true
-      mwspawn.spawn: true
-      mwspawn.help: true
-      mwspawn.reload: true
-      mwspawn.info: true
-  mwspawn.help:
-    description: "Даёт доступ к списку команд MultiWorldSpawn."
+      ewspawn.setspawn: true
+      ewspawn.spawn: true
+      ewspawn.help: true
+      ewspawn.reload: true
+      ewspawn.info: true
+  ewspawn.help:
+    description: "Даёт доступ к списку команд EveryWorldSpawn."
     default: true
-  mwspawn.reload:
+  ewspawn.reload:
     description: "Даёт доступ к команде перезагрузки плагина."
     default: false
-  mwspawn.info:
+  ewspawn.info:
     description: "Даёт доступ к информации о плагине."
     default: true
-  mwspawn.setspawn:
+  ewspawn.setspawn:
     description: "Даёт доступ к команде установки точки спавна."
     default: false
-  mwspawn.spawn:
+  ewspawn.spawn:
     description: "Даёт возможность телепортироваться на спавн."
     default: true
     children:
-      mwspawn.spawn.others: false
-  mwspawn.spawn.others:
+      ewspawn.spawn.others: false
+  ewspawn.spawn.others:
     description: "Даёт возможность телепортировать других игроков на спавн."
     default: false
     children:
-      mwspawn.spawn.others.silent: false
-  mwspawn.spawn.others.silent:
+      ewspawn.spawn.others.silent: false
+  ewspawn.spawn.others.silent:
     description: "Даёт возможность телепортировать других игроков на спавн анонимно."
     default: false
