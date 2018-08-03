@@ -1,4 +1,4 @@
-package ru.lmrbooml.EveryWorldSpawn.commands;//
+package ru.lmrbooml.EveryWorldSpawn.commands;
 
 import org.bukkit.Bukkit;
 import org.bukkit.ChatColor;

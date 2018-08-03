@@ -1,4 +1,4 @@
-package ru.lmrbooml.EveryWorldSpawn.commands;//
+package ru.lmrbooml.EveryWorldSpawn.commands;
 
 import java.util.ArrayList;
 import java.util.List;
